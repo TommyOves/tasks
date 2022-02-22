@@ -12,22 +12,22 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    let sum = 0;
+    let tot = 0;
     if (first > 0) {
-        sum = sum + first;
+        tot = tot + first;
     }
     if (second > 0) {
-        sum = sum + second;
+        tot = tot + second;
     }
     if (third > 0) {
-        sum = sum + third;
+        tot = tot + third;
     }
-    return sum;
+    return tot;
 }
 
 /**
  * Consumes a string and produces the same string in UPPERCASE and with an exclamation
- * mark added to the end.
+ * mark added to the end
  */
 export function shout(message: string): string {
     return message.toUpperCase() + "!";
