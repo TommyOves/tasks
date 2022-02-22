@@ -6,8 +6,7 @@ import { constants } from "buffer";
  *      C = (F - 32) * 5/9
  */
 export function fahrenheitToCelius(temperature: number): number {
-    const celcius: number = (temperature - 32) * (5 / 9);
-    return celcius;
+    return (temperature - 32) * (5 / 9);
 }
 
 /**
