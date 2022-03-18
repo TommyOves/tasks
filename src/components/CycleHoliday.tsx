@@ -3,21 +3,21 @@ import { Button } from "react-bootstrap";
 
 export function CycleHoliday(): JSX.Element {
     const [holiday, setHoliday] = useState<Holiday>("🎃");
-    type Holiday = "🎃" | "🎄" | "🐇" | "🦃" | "🎆";
+    type Holiday = "🎃" | "🎄" | "🐇" | "🦃" | "💖";
 
     const changeHoliday1: Record<Holiday, Holiday> = {
         "🎄": "🐇",
-        "🐇": "🎆",
-        "🎆": "🎃",
+        "🐇": "🎃",
         "🎃": "🦃",
-        "🦃": "🎄"
+        "🦃": "💖",
+        "💖": "🎄"
     };
     const changeHoliday2: Record<Holiday, Holiday> = {
         "🎃": "🦃",
         "🦃": "🎄",
-        "🎄": "🐇",
-        "🐇": "🎆",
-        "🎆": "🎃"
+        "🎄": "💖",
+        "💖": "🐇",
+        "🐇": "🎃"
     };
     function changeAlphabetically() {
         const newHoliday = changeHoliday1[holiday];
