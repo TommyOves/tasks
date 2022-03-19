@@ -10,24 +10,20 @@ export function CheckAnswer({
 }: {
     expectedAnswer: string;
 }): JSX.Element {
-    const [ans, setAns] = useState<string>("");
+    const [input, userInput] = useState<string>("");
 
-    const updateAns = (e: ChangeEvent) => {
-        setAns(e.target.value);
-    };
-
+    function changeInput(event: ChangeEvent) {
+        userInput(event.target.value);
+    }
     return (
         <div>
             <h3>Check Answer</h3>
             <Form.Group controlId="formCheckAnswer">
-                <Form.Label>What is the Answer?</Form.Label>
-                <Form.Control
-                    type="text"
-                    value={ans}
-                    onChange={updateAns}
-                ></Form.Control>
+                <Form.Label>Check your answer here: </Form.Label>
+                <Form.Control value={input} onChange={changeInput} />
             </Form.Group>
-            <p>{ans === expectedAnswer ? "✔️" : "❌"}</p>
+            <option> Your answer is: </option>
+            {input === expectedAnswer ? "✔️" : "❌"}
         </div>
     );
 }
